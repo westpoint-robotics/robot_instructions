@@ -18,8 +18,10 @@ If you have installed the **ntpdate** package before you need to uninstall using
 
 Install NTP packages with the following cli:
 
-`sudo apt install ntp`
-`sudo apt install ntpdate`
+```
+sudo apt install ntp
+sudo apt install ntpdate
+```
 
 ### 2. Configure NTP Server
 This step involves editing the NTP configuration file on the computer you wish to set up as an NTP server.  The configuration file for ntpd is located at /etc/ntp.conf.  The default Ubuntu file probably requires some modification for optimal performance.  To edit this file, use
@@ -70,8 +72,10 @@ You will enter your computer's password, and then see:
 ### 3. Configure NTP Client
 If you want to configure a computer to be an NTP client, install the following packages
 
-`sudo apt install ntp`
-`sudo apt install ntpdate`
+```
+sudo apt install ntp
+sudo apt install ntpdate
+```
 
 Edit the /etc/ntp.conf file using cli:
 
@@ -83,8 +87,10 @@ Under the section in the configuration document labeled, "Specify one or more NT
 
 The above was used as the static IP Address on a companion computer for a Clearpath Jackal; the address you use should reflect the IP of the computer you set up as an NTP server in section 2.  Next, restrict the type of access you allow these servers. In this example the servers are not allowed to modify the run-time configuration or query your Linux NTP server.  The two lines below come in the section of the configuration document immediately following the previous edit.
 
-`restrict default notrust nomodify nopeer`
-`restrict 192.168.131.50`
+```
+restrict default notrust nomodify nopeer
+restrict 192.168.131.50
+```
 
 We also want to make sure that localhost (the universal IP address used to refer to a Linux server itself) has full access without any restricting keywords
 
