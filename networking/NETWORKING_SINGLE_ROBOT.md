@@ -20,9 +20,18 @@ Both your onboard and companion computers should have at least one ethernet port
 
 Now that you know what your ethernet cable will be pluggin into, you will need to create a Wired Network Profile on the companion computer.
 1. Open your Network Settings, and make sure you have "Network" selected from your options on the left; this is the label used for ethernet.
-2. By the **Wired** heading, click the <kbd>+</kbd> symbol to add a new profile.
-3. Under the "Identity" tab, name the profile something relevant to the mobile platform you're using (e.g. jackal_wired), and select the MAC Address for the port you are using for the connection.  If you do not know which port this is, make sure both computers are powered on and connected by Cat 5, and on your companion computer, run, `ifconfig` in a terminal.  If you unplug the onboard computer, and run `ifconfig` again, you should notice a port disappear, or change.  Select that port under the MAC Address dropdown.  This will force that port to be used for the connection of the onboard computer to the companion.  Plugging in to any other port will mean the onboard computer does not show up in a list of available IP Addresses.
+2. By the **Wired** heading, click the <kbd>+</kbd> symbol to add a new profile.  
+
+   ![add profile](https://github.com/westpoint-robotics/robot_instructions/blob/main/networking/Add_Wired_Network.png)
+
+3. Under the "Identity" tab, name the profile something relevant to the mobile platform you're using (e.g. jackal_wired), and select the MAC Address for the port you are using for the connection.  If you do not know which port this is, make sure both computers are powered on and connected by Cat 5, and on your companion computer, run, `ifconfig` in a terminal.  If you unplug the onboard computer, and run `ifconfig` again, you should notice a port disappear, or change.  Select that port under the MAC Address dropdown.  This will force that port to be used for the connection of the onboard computer to the companion.  Plugging in to any other port will mean the onboard computer does not show up in a list of available IP Addresses. 
+
+![profile identity](https://github.com/westpoint-robotics/robot_instructions/blob/main/networking/my_robot_wired.png)
+
 4. Under the "IPv4 tab" select "Manual" instead of "Automatic (DHCP)".  Enter an address with the first three octets matching the broadcat address of your mobile platform (e.g. 192.168.131 for the Clearpath Jackal), and the last octet having a value between 0 and 200.  Your robot's user guide may have a suggestion about this, or there may be an example in the documentation in one of the repositories referenced below.  Use a Netmask 255.255.255.0, leaving the last octet free to be modified by the onboard computer.
+
+ ![ipv4](https://github.com/westpoint-robotics/robot_instructions/blob/main/networking/my_robot_ip4.png)
+
 5. Click "Add" to save the profile, and add it to the list of Wired network profiles.
 
 ### 2. Networking a Companion Computer and a Sensor
