@@ -70,7 +70,16 @@ You will enter your computer's password, and then see:
 
 
 ### 3. Configure NTP Client
-If you want to configure a computer to be an NTP client, install the following packages
+**IMPORTANT:** If you are working with the **GVR-Bot**, exercise **extreme caution** in making alterations to the onboard computer!  If you are using a Jackal, or Husky, continue with the below.  For GVR-Bot, the client side NTP set up should already be in place.
+
+If you want to configure a computer to be an NTP client, make sure ntp, and ntpdate packages are installed.
+
+```
+dpkg -L ntp
+dpkg -L ntpdate
+```
+
+If they are not, use the following cli:
 
 ```
 sudo apt install ntp
