@@ -157,4 +157,13 @@ than NTP.  Section 7 of the [usma_ouster](https://github.com/westpoint-robotics/
 where to find the instructions for this for the Ouster.  For other devices, check user manuals, including appedicies to determine whether
 you may need to synchronize a clock on the device with the rest of your network.
 
+### 5. Troubleshooting/Useful Tools
 
+If you want a fast way of checking your computer synchronization, and correcting it as needed, you can edit your companion's ~/.bashrc file and add two aliases.
+
+```
+alias synchtime="sshpass -p <PASSWORD> ssh -t <USER>@<CLIENT_IP> 'echo <PASSWORD> | sudo -S -k ntpdate -s <CLIENT_IP> > /dev/null 2>&1'"
+alias synchcheck="sshpass -p <PASSWORD> ssh -t <USER>@<CLIENT_IP> 'ntpdate -q <CLIENT_IP>'"
+
+```
+Run these from your server (companion) computer, and they will correct and check your time synch with your client (onboard) respectively.
