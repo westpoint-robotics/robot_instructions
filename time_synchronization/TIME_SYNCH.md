@@ -14,7 +14,7 @@ Using NTP is a great way to keep your system clock set correctly. It works by co
 ### 1. Installing NTP Packages
 If you have installed the **ntpdate** package before you need to uninstall using the following cli
 
-`sudo aptitude remove ntpdate`
+`sudo apt remove ntpdate`
 
 Install NTP packages with the following cli:
 
