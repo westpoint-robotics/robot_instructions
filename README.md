@@ -7,7 +7,8 @@ Catalog of instructions, and references to relevant repositories for robotic mob
 ### 1. Mobile Platforms
 - [Clearpath Jackal](https://github.com/westpoint-robotics/usma_jackal)
 - [Clearpath Husky](https://github.com/westpoint-robotics/husky_rrc)
-- [GVR-Bot](https://github.com/westpoint-robotics/usma_gvrbot)
+- This is the main repository for [GVR-Bot](https://github.com/westpoint-robotics/usma_gvrbot).  Within that, a good place to start is by installing the dependency list in the README, cloning the repository to your working catkin workspace.  Next, you will want to verify that you can communicate with the GVR-Bot through a Linux computer (or VM), and control the motors.  For that, follow the [Instructions for connecting Linux computers to the GVR-Bot
+](https://github.com/westpoint-robotics/usma_gvrbot/blob/master/linux_connect.md).  If you are using a more recent version of Ubuntu than is listed, make the substitution as needed (e.g. melodic in place of indigo).
 
 ### 2. Sensors
 - [FLIR cameras](https://github.com/westpoint-robotics/usma_spinnaker)
